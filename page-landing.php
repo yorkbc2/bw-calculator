@@ -12,7 +12,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
 	<meta name="apple-mobile-web-app-title" content="<?php bloginfo( 'name' ); ?> - <?php bloginfo( 'description' ); ?>">
     
-	<title><?php wp_title(); ?></title>
+	<!-- <title><?php wp_title(); ?></title> -->
 	<link rel="shortcut icon" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/favicon.ico" type="image/x-icon" />
 
 	<?php wp_head(); ?>
@@ -22,7 +22,7 @@
 	<header class="page-header">
         <div class="page-header__title">
             <h2>
-                Something wrote here
+                <?php echo get_bloginfo('name'); ?>
             </h2>
         </div>
         <div class="page-header__logo">

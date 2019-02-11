@@ -58,10 +58,6 @@ $menu-close-color: #fff;
 $menuContainerMobilePaddingTop: 30%;
 // MENU END
 
-// FOOTER
-$footerBgColor: $themeColorOne;
-$footerFontColor: #fff;
-$footerLinkColorActive: darken($footerFontColor, 5%);
 
 // WRAPPER
 $wrapperBgColor: #fff;
@@ -145,3 +141,7 @@ $messageIconFontColor: $themeColorTwo;
 
 $titleBackground: linear-gradient(#494949, #2e2e2e);
 $logoBackground: #fcb22a;
+// FOOTER
+$footerBgColor: $titleBackground;
+$footerFontColor: #fff;
+$footerLinkColorActive: darken($footerFontColor, 5%);

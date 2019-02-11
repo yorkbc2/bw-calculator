@@ -201,3 +201,18 @@ function bw_breadcrumbs_localization($l10n)
 
 add_filter('kama_breadcrumbs_default_loc', 'bw_breadcrumbs_localization', 10, 1);
 
+function get_calculator_rest() {
+    // cors();
+    $file = file_get_contents(__DIR__ . "/calculator.php"); 
+    echo $file;
+    exit;
+}
+
+add_action( 'rest_api_init', 'add_custom_api');
+ 
+function add_custom_api(){
+    register_rest_route( 'api/v1', 'calculator', array(
+        'methods' => 'GET',
+        'callback' => 'get_calculator_rest',
+    ));
+} 

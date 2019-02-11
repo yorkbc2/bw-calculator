@@ -2415,11 +2415,11 @@ a:hover .fa {
 
 .pre-footer {
   padding: 20px 0;
-  background-color: #3e5871; }
+  background-color: linear-gradient(#494949, #2e2e2e); }
 
 .copyright {
   padding: 14px 0;
-  background-color: #2c3e50;
+  background-color: linear-gradient(#494949, #2e2e2e);
   text-align: center;
   color: #fff; }
   .copyright a {

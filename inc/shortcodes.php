@@ -599,3 +599,17 @@ if (!function_exists('bw_reviews_shortcode')) {
 
     add_shortcode('bw-reviews', 'bw_reviews_shortcode');
 }
+
+if (!function_exists('get_calculator')) {
+    function get_calculator() {
+
+        return '
+            <div id="calculator-output"></div>
+            <script>window.CALCULATOR_SELECTOR = "#calculator-output"; window.SCRIPT_PATH = "'.get_template_directory_uri().'/assets/js/numeral.min.js"</script>
+            <script src="'.get_template_directory_uri().'/assets/js/calculator-loader.js"></script>
+        ';
+
+    }
+
+    add_shortcode('get-calculator', 'get_calculator');
+}

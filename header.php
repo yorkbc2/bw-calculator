@@ -20,7 +20,7 @@
     <header class="page-header">
         <div class="page-header__title">
             <h2>
-                Something wrote here
+                <?php echo get_bloginfo('name'); ?>
             </h2>
         </div>
         <div class="page-header__logo">
