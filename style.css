@@ -6540,7 +6540,8 @@ em {
   src: url("assets/fonts/font-awesome/fa-brands-400.eot");
   src: url("assets/fonts/font-awesome/fa-brands-400.eot?#iefix") format("embedded-opentype"), url("assets/fonts/font-awesome/fa-brands-400.woff2") format("woff2"), url("assets/fonts/font-awesome/fa-brands-400.woff") format("woff"), url("assets/fonts/font-awesome/fa-brands-400.ttf") format("truetype"), url("assets/fonts/font-awesome/fa-brands-400.svg#fontawesome") format("svg"); }
 
-.fab {
+.fab,
+.fa {
   font-family: 'Font Awesome 5 Brands'; }
 
 html.pum-open.pum-open-overlay.pum-open-scrollable body > [aria-hidden],
@@ -8746,7 +8747,7 @@ html {
 
 html,
 body {
-  min-height: 100%; }
+  min-height: 100vh; }
 
 body {
   position: relative;
