@@ -8121,17 +8121,17 @@ a:hover .fa {
       -ms-transform: rotate(-20deg);
       transform: rotate(-20deg);
       background: #fcb22a; }
-    .page-header__title h2 {
+    .page-header__title h3 {
       margin: 0;
       padding: 0;
       font-size: 16px;
       color: #fff; }
       @media screen and (min-width: 640px) and (max-width: 1024px) {
-        .page-header__title h2 {
+        .page-header__title h3 {
           width: 30%;
           font-size: 22px; } }
       @media screen and (min-width: 1025px) {
-        .page-header__title h2 {
+        .page-header__title h3 {
           width: 20%;
           font-size: 24px; } }
   .page-header__logo {

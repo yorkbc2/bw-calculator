@@ -19,9 +19,9 @@
 <div class="wrapper">
     <header class="page-header">
         <div class="page-header__title">
-            <h2>
+            <h3>
                 <?php echo get_bloginfo('name'); ?>
-            </h2>
+            </h3>
         </div>
         <div class="page-header__logo">
             <?php get_default_logo_link(); ?>
