@@ -1,6 +1,6 @@
 "use strict";
 
-fetch("/wordpress/index.php/wp-json/api/v1/calculator").then(function(response) {
+fetch("/wp-json/api/v1/calculator").then(function(response) {
     return response.text();
 }).then(function(data) {
     var scriptName = window.SCRIPT_PATH || "/wordpress/assets/js/numeral.min.js", selector = window.CALCULATOR_SELECTOR || "", element = document.querySelector(selector), script = document.createElement("script");
@@ -12,6 +12,6 @@ fetch("/wordpress/index.php/wp-json/api/v1/calculator").then(function(response) 
     element.innerHTML = data;
     document.body.appendChild(script);
     setTimeout(function() {
-        $("#sheet").calx();
+        jQuery("#sheet").calx();
     }, 500);
 });
