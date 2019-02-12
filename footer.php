@@ -1,24 +1,22 @@
 </div><!-- .page-wrapper end-->
 
-<footer class="footer js-footer">
-    <?php if (is_active_sidebar('footer-widget-area')) : ?>
-        <div class="pre-footer">
-            <div class="container">
-                <div class="row">
-                    <?php dynamic_sidebar('footer-widget-area'); ?>
-                </div>
-            </div>
-        </div><!-- .pre-footer end-->
-    <?php endif; ?>
-
-    <div class="copyright">
-        <p class="container">
-            <?php _e('Developed by', 'brainworks') ?>
-            <a href="https://brainworks.pro/" target="_blank">BRAIN WORKS</a>
-            &copy; <?php echo date('Y'); ?>
-        </p>
-    </div>
-</footer>
+<footer class="page__footer js-footer">
+        <div class="page__footer_socials">
+            <?php foreach (get_social() as $social):?>
+                <a href="<?php echo $social['url'] ?>" target="_blank" class="page__footer_socials_item">
+                    <div>
+                        <?php if (!empty($social['icon-html'])): echo $social['icon-html']; 
+                                else: echo '<i class="'.$social['icon'].'"></i>';
+                                endif; ?>
+                        
+                    </div>
+                    <div>
+                        <?php echo $social['text']; ?>
+                    </div>
+                </a>
+            <?php endforeach; ?>
+        </div>
+    </footer>
 
 </div><!-- .wrapper end-->
 

@@ -290,6 +290,18 @@ if (!function_exists('get_social')) {
             ],
         ];
 
+        foreach ($_socials as $j => $soc) {
+            if (isset($soc['url']) && !empty($soc['url'])) {
+                $url = explode("/", $soc['url']);
+                $profile = $url[sizeof($url) - 1];
+                $splitter = '@';
+                if (strtolower($soc['text']) === "facebook") {
+                    $splitter = '/';
+                }
+                $_socials[$j]['text'] = $splitter . $profile;
+            }
+        }
+
         $socials = array_filter($_socials, function ($value) {
             return $value['url'] !== '#' && !empty($value['url']) && filter_var($value['url'], FILTER_VALIDATE_URL);
         });

@@ -23,7 +23,7 @@
         scrollTop('.js-scroll-top');
         wrapHighlightedElements('.highlighted');
         if (ajax) {
-            ajaxLoadMorePosts('.js-load-more', '.js-ajax-posts');
+            ajaxLoadMorePosts('.js-load-more', '.js-ajax-posts'); 
         }
         stickFooter('.js-footer', '.js-container');
         // hamburgerMenu('.js-menu', '.js-hamburger', '.js-menu-close');
@@ -37,6 +37,8 @@
                 removeAllStyles($('.js-menu'));
             }
         });
+
+        disableSaveAs();
     });
 
     /**
@@ -473,5 +475,26 @@
 
         });
     };
+
+    const disableSaveAs = () => {
+        let isCtrl = false; 
+
+        window.oncontextmenu = (() => false);
+
+        window.onkeydown = (e) => {
+            if (e.keyCode === 17) {
+                isCtrl = true;
+            }
+ 
+            if (e.keyCode === 83 && isCtrl) {
+                return false;
+            }
+        };
+        window.onkeyup = (e) => {
+            if (e.keyCode === 17) {
+                isCtrl = false;
+            }
+        };
+    }
 
 })(window, document, jQuery, window.jpAjax);

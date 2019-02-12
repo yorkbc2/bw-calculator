@@ -1,4 +1,4 @@
-fetch("/wp-json/api/v1/calculator")
+fetch("/wordpress/index.php/wp-json/api/v1/calculator")
     .then(response => response.text())
     .then(data => {
         const scriptName = window.SCRIPT_PATH || "/wordpress/assets/js/numeral.min.js",
@@ -9,12 +9,12 @@ fetch("/wp-json/api/v1/calculator")
         script.src = scriptName;
         script.type = 'text/javascript';
 
-        console.log(data);
-
-        
         if (!element) {
             return;
         }
         element.innerHTML = data;
         document.body.appendChild(script);
-    })   
+        setTimeout(() => {
+            $('#sheet').calx();
+        }, 500)
+    })    

@@ -31,7 +31,28 @@
         </div>
     </header>
 
-<?php get_template_part('loops/content', 'page'); ?>
+    <div class="js-container">
+    <?php get_template_part('loops/content', 'page'); ?>
+    </div>
+
+
+    <footer class="page__footer js-footer">
+        <div class="page__footer_socials">
+            <?php foreach (get_social() as $social):?>
+                <a href="<?php echo $social['url'] ?>" target="_blank" class="page__footer_socials_item">
+                    <div>
+                        <?php if (!empty($social['icon-html'])): echo $social['icon-html']; 
+                                else: echo '<i class="'.$social['icon'].'"></i>';
+                                endif; ?>
+                        
+                    </div>
+                    <div>
+                        <?php echo $social['text']; ?>
+                    </div>
+                </a>
+            <?php endforeach; ?>
+        </div>
+    </footer>
 
 <?php wp_footer(); ?>
 

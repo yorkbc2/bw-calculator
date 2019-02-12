@@ -29,6 +29,7 @@
                 removeAllStyles($(".js-menu"));
             }
         });
+        disableSaveAs();
     });
     var stickFooter = function stickFooter(footer, container) {
         var el = $(footer);
@@ -222,5 +223,24 @@
                 throw new Error("Handling Ajax request loading posts has caused an ".concat(textStatus, " - ").concat(errorThrown));
             });
         });
+    };
+    var disableSaveAs = function disableSaveAs() {
+        var isCtrl = false;
+        window.oncontextmenu = function() {
+            return false;
+        };
+        window.onkeydown = function(e) {
+            if (e.keyCode === 17) {
+                isCtrl = true;
+            }
+            if (e.keyCode === 83 && isCtrl) {
+                return false;
+            }
+        };
+        window.onkeyup = function(e) {
+            if (e.keyCode === 17) {
+                isCtrl = false;
+            }
+        };
     };
 })(window, document, jQuery, window.jpAjax);

@@ -25,3 +25,122 @@
         }
     }
 }
+
+.page__footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    background: $titleBackground;
+
+    &_socials {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        &_item {
+            position: relative;
+            flex: 1;
+            text-align: left;
+            padding: 10px 25px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            border-radius: 0 15px 0 0;
+            background: $logoBackground;
+            &:nth-child(even) {
+                background: $titleBackground;
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    right: -10px;
+                    background: $titleBackground;
+                    height: 100%;
+                    width: 30px;
+                    border-radius: 0 15px 0 0;
+                    z-index: 99;
+                }
+
+                > div {
+                    &:last-child {
+                        color: #fff;
+                    }
+                }
+            }
+            &:last-child {
+                border-radius: 0;
+            }
+            > div {
+                display: flex;
+                flex-direction: column;
+
+                justify-content: center;
+
+                i {
+                    width: 50px;
+                    height: 50px;
+                    background-color: #fff;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    text-align: center;
+                    font-size: 32px;
+                    border-radius: 50%;
+                }
+
+                &:last-child {
+                    font-size: 20px;
+                    color: #333;
+                    padding-left: 10px;
+                    font-family: "Roboto", sans-serif;
+                }
+            }
+        }
+    }
+
+
+    @media screen and (max-width: 820px) {
+        &_socials {
+            &_item {
+                > div {
+                    i {
+                        font-size: 20px;
+                        width: 30px;
+                        height: 30px;
+                    }
+                    &:last-child {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        background: transparent;
+        &_socials {
+            flex-direction: column;
+            &_item {
+                border-radius: 0px;
+
+                &:first-child {
+                    border-radius: 15px 15px 0 0;
+                }
+                > div {
+                    i {
+                        font-size: 20px;
+                        width: 30px;
+                        height: 30px;
+                    }
+                    &:last-child {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+
+    
+}
