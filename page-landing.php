@@ -38,7 +38,7 @@
 
     <footer class="page__footer js-footer">
         <div class="page__footer_socials">
-            <?php foreach (get_social() as $social):?>
+            <?php foreach (get_social() as $soc_name => $social):?>
                 <a href="<?php echo $social['url'] ?>" target="_blank" class="page__footer_socials_item">
                     <div>
                         <?php if (!empty($social['icon-html'])): echo $social['icon-html']; 
@@ -47,7 +47,7 @@
                         
                     </div>
                     <div>
-                        <?php echo $social['text']; ?>
+                    <?php echo $soc_name === "facebook" ? "Валик Юстас" : $social['text']; ?>
                     </div>
                 </a>
             <?php endforeach; ?>
