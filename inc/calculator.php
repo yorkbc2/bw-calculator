@@ -148,7 +148,7 @@
                                     </tr>
                                     </tbody>
                                 </table>
-                                <h2>Витрати Колцентр</h2>
+                                <h2>Расходы Колцентр</h2>
                                 <table width="100%" border="0" cellspacing="0" cellpadding="0" class="tblhold">
                                     <tbody>
                                     <tr>
